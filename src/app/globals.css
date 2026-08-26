@@ -1,26 +1,263 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   ELVEXIFY — DESIGN SYSTEM
+   Dark, technical, premium. Electric blue + violet + cyan.
+   ============================================================ */
+
+@theme {
+  /* ---- Palette ---- */
+  --color-base: #070b1c;
+  --color-base-2: #0b1130;
+  --color-surface: #0e1535;
+  --color-surface-2: #121a3f;
+  --color-hairline: #1d2750;
+  --color-hairline-soft: #18203f;
+
+  --color-ink: #eef2ff;
+  --color-ink-soft: #b7c0e6;
+  --color-muted: #7e88b4;
+  --color-faint: #545e88;
+
+  --color-electric: #2b5bff;
+  --color-electric-bright: #4f7bff;
+  --color-violet: #7b5bff;
+  --color-cyan: #22d3ee;
+  --color-rose: #ff5d7a;
+
+  /* ---- Fonts ---- */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Radii ---- */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+
+  /* ---- Motion ---- */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   BASE
+   ============================================================ */
+* {
+  border-color: var(--color-hairline);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  background-image:
+    radial-gradient(1100px 700px at 78% -8%, rgba(43, 91, 255, 0.14), transparent 60%),
+    radial-gradient(900px 600px at 8% 6%, rgba(123, 91, 255, 0.1), transparent 55%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(43, 91, 255, 0.32);
+  color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2a5c;
+  border-radius: 999px;
+  border: 3px solid var(--color-base);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2b3f7f;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-electric-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Hairline gradient border via mask */
+.border-gradient {
+  position: relative;
+}
+.border-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    140deg,
+    rgba(79, 123, 255, 0.55),
+    rgba(123, 91, 255, 0.18) 40%,
+    rgba(34, 211, 238, 0.25)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(120, 140, 220, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 140, 220, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.bg-grid-fade {
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 40%, transparent 100%);
+}
+
+/* Glass panel */
+.glass {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 26, 63, 0.55),
+    rgba(11, 17, 48, 0.55)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(100deg, #fff 0%, #b9c6ff 40%, #8fa6ff 60%, #7b5bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-electric {
+  background: linear-gradient(100deg, #4f7bff, #7b5bff 55%, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glow dot / line helpers */
+.glow-soft {
+  box-shadow: 0 0 0 1px rgba(79, 123, 255, 0.18),
+    0 18px 60px -20px rgba(43, 91, 255, 0.45);
+}
+
+/* Animated conic ring */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 3.6s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float-y {
+  animation: float-y 7s ease-in-out infinite;
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Reveal base (used with IntersectionObserver/whileInView) */
+/* Reveal-on-scroll: hidden ONLY when JS is active (.js on <html>).
+   Without JS the content stays fully visible. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 22px));
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Hero entrance: base state is VISIBLE; animation only enhances.
+   No JS required, so above-the-fold content is never hidden. */
+.fade-up {
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fade-in 1s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .js [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
