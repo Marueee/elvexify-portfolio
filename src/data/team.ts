@@ -4,73 +4,76 @@ export interface TeamMember {
   role: string;
   specialty: string;
   interests: string[];
-  /** gradient accent for the placeholder tile */
   accent: "electric" | "violet" | "cyan";
+  image: string;
   initials: string;
 }
 
 export const TEAM: TeamMember[] = [
   {
-    id: "m1",
-    name: "[TEAM MEMBER NAME]",
-    role: "Chief Executive / Product Lead",
-    specialty: "Owns product vision, client strategy and delivery discipline.",
-    interests: ["Product", "Strategy", "Systems Thinking"],
+    id: "haikal",
+    name: "Muhammad Haikal bin Mohd Jaki",
+    role: "Co-Founder & Technical Lead",
+    specialty:
+      "Leads system architecture, enterprise platform delivery, and full-stack engineering discipline across all Elvexify engagements.",
+    interests: ["System Architecture", "Enterprise Platforms", "Next.js", "Laravel"],
     accent: "electric",
-    initials: "EL",
+    image: "/team/haikal.png",
+    initials: "MH",
   },
   {
-    id: "m2",
-    name: "[TEAM MEMBER NAME]",
-    role: "Technical Lead",
-    specialty: "Architects systems and keeps the engineering bar high.",
-    interests: ["Architecture", "Cloud", "Performance"],
-    accent: "violet",
-    initials: "EL",
-  },
-  {
-    id: "m3",
-    name: "[TEAM MEMBER NAME]",
-    role: "Full-Stack Developer",
-    specialty: "Moves comfortably across frontend, backend and data.",
-    interests: ["TypeScript", "Laravel", "Next.js"],
+    id: "aiman-hakimi",
+    name: "Muhammad Aiman Hakimi bin Abdul Wahid",
+    role: "AI & Machine Learning Lead",
+    specialty:
+      "Architects intelligent diagnostic models, on-device Edge AI pipelines, and computer vision classification systems.",
+    interests: ["Computer Vision", "TensorFlow Lite", "Edge AI", "Model Optimization"],
     accent: "cyan",
-    initials: "EL",
+    image: "/team/aiman-hakimi.png",
+    initials: "AH",
   },
   {
-    id: "m4",
-    name: "[TEAM MEMBER NAME]",
-    role: "Frontend Engineer",
-    specialty: "Builds interfaces that are fast, accessible and precise.",
-    interests: ["React", "Tailwind", "Motion"],
-    accent: "electric",
-    initials: "EL",
-  },
-  {
-    id: "m5",
-    name: "[TEAM MEMBER NAME]",
-    role: "Backend Engineer",
-    specialty: "Designs APIs, data models and resilient services.",
-    interests: ["PHP", "PostgreSQL", "APIs"],
+    id: "ilyas",
+    name: "Muhammad Ilyas bin Kamal Nawawi",
+    role: "Full-Stack & Web Platform Engineer",
+    specialty:
+      "Specializes in robust enterprise web applications, real-time database models, and reactive dashboard workflows.",
+    interests: ["Laravel", "Livewire", "PostgreSQL", "React"],
     accent: "violet",
-    initials: "EL",
+    image: "/team/ilyas.png",
+    initials: "MI",
   },
   {
-    id: "m6",
-    name: "[TEAM MEMBER NAME]",
-    role: "UI/UX Designer",
-    specialty: "Turns complexity into calm, usable experiences.",
-    interests: ["Design Systems", "Research", "Prototyping"],
-    accent: "cyan",
-    initials: "EL",
-  },
-  {
-    id: "m7",
-    name: "[TEAM MEMBER NAME]",
-    role: "Mobile / Software Engineer",
-    specialty: "Ships cross-platform products that feel native.",
-    interests: ["Flutter", "Dart", "Mobile"],
+    id: "azim",
+    name: "Muhammad Azim bin Mat Kala",
+    role: "IoT & Embedded Systems Engineer",
+    specialty:
+      "Engineers connected microcontrollers, telemetry sensors, and low-latency cloud-to-hardware data transmission pipelines.",
+    interests: ["ESP32-S3", "IoT Sensors", "Embedded C++", "Cloud Telemetry"],
     accent: "electric",
-    initials: "EL",
+    image: "/team/azim.png",
+    initials: "MA",
+  },
+  {
+    id: "aiman-junaidih",
+    name: "Mohammad Aiman bin Junaidih",
+    role: "Mobile Product & Software Engineer",
+    specialty:
+      "Builds high-performance, offline-first mobile applications with native fluidity and ergonomic design systems.",
+    interests: ["Flutter", "Dart", "Mobile Architecture", "Supabase"],
+    accent: "cyan",
+    image: "/team/aiman-junaidih.png",
+    initials: "AJ",
+  },
+  {
+    id: "luqmanul",
+    name: "Luqmanul Hakeem bin Zulkarnain",
+    role: "Cybersecurity & Systems Engineer",
+    specialty:
+      "Focuses on threat defense architectures, secure API protocols, and interactive gamified security simulation engines.",
+    interests: ["Application Security", "Threat Detection", "DevSecOps", "Cloud Security"],
+    accent: "violet",
+    image: "/team/luqmanul.png",
+    initials: "LH",
   },
 ];

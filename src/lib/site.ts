@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Elvexify",
   tagline: "Elevate Ideas. Engineer Possibilities.",
-  email: "hello@elvexify.com",
+  email: "elvexify.ent@gmail.com",
   url: "https://elvexify.com",
   social: {
     github: "https://github.com/elvexify",
