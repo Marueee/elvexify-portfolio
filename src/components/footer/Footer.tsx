@@ -6,8 +6,6 @@ const SERVICE_LINKS = [
   { label: "Web Applications", href: "#services" },
   { label: "Mobile Applications", href: "#services" },
   { label: "Automation", href: "#services" },
-  { label: "System Integration", href: "#services" },
-  { label: "UI/UX Design", href: "#services" },
 ];
 
 const PROJECT_LINKS = [

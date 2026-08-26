@@ -4,8 +4,6 @@ import {
   Globe,
   Smartphone,
   Workflow,
-  Cable,
-  Palette,
   BarChart3,
 } from "lucide-react";
 
@@ -68,30 +66,8 @@ export const SERVICES: Service[] = [
     diagram: "AUT",
   },
   {
-    id: "integration",
-    index: "05",
-    title: "System Integration",
-    summary: "Connect existing systems, APIs and business platforms.",
-    detail:
-      "Your tools should talk to each other. We design clean integration layers that connect legacy systems, third-party APIs and data platforms so information flows where it is needed, automatically.",
-    icon: Cable,
-    tech: ["REST", "GraphQL", "Webhooks", "Message Queues"],
-    diagram: "INT",
-  },
-  {
-    id: "ui-ux",
-    index: "06",
-    title: "UI/UX Design",
-    summary: "Design intuitive interfaces that make complex systems easier to use.",
-    detail:
-      "We design for comprehension first. Through research, prototyping and pragmatic design systems, we make sophisticated software feel calm, legible and confident — for operators and end users alike.",
-    icon: Palette,
-    tech: ["Design Systems", "Figma", "Prototyping", "Accessibility"],
-    diagram: "UX",
-  },
-  {
     id: "data-dashboards",
-    index: "07",
+    index: "05",
     title: "Data & Dashboard Solutions",
     summary: "Transform business data into useful dashboards, insights and reporting.",
     detail:
