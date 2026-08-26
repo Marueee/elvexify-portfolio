@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 
 const PILLARS = [
-  { t: "Collaborative engineering", d: "Seven engineers, one standard of quality." },
+  { t: "Collaborative engineering", d: "Six engineers, one standard of quality." },
   { t: "User-centered development", d: "Built for the people who actually use it." },
   { t: "Practical problem solving", d: "Technology in service of a real outcome." },
   { t: "Continuous learning", d: "We invest in staying ahead of the curve." },
