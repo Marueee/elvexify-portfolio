@@ -66,7 +66,7 @@ export function Hero() {
           className="fade-up mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 font-mono text-xs uppercase tracking-widest text-faint"
           style={{ animationDelay: "0.44s" }}
         >
-          <span>7 Engineers</span>
+          <span>6 Engineers</span>
           <span className="h-3 w-px bg-hairline" />
           <span>Custom Software</span>
           <span className="h-3 w-px bg-hairline" />

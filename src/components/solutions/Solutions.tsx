@@ -55,7 +55,7 @@ export function Solutions() {
         <div className="mt-6 flex flex-col items-start gap-6 rounded-3xl border border-hairline bg-gradient-to-r from-surface/60 to-base p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
           <div>
             <span className="font-display text-4xl font-semibold text-transparent [-webkit-text-stroke:1px_rgba(123,139,180,0.5)] sm:text-5xl">
-              05
+              06
             </span>
             <h3 className="mt-3 font-display text-2xl font-semibold text-ink">
               Evolve — continuously.

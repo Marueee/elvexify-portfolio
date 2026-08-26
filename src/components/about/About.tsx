@@ -46,7 +46,7 @@ export function About() {
               <div className="flex items-end justify-between">
                 <div>
                   <p className="font-display text-6xl font-semibold text-gradient-electric">
-                    7
+                    6
                   </p>
                   <p className="mt-1 font-mono text-xs uppercase tracking-widest text-faint">
                     founding engineers

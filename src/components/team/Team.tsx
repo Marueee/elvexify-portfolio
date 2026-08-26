@@ -45,7 +45,7 @@ function MemberCard({ m, i }: { m: TeamMember; i: number }) {
         )}
       >
         {/* Photo Container */}
-        <div className="relative aspect-[4/4.2] w-full overflow-hidden rounded-2xl border border-hairline/80 bg-base/80">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-hairline/80 bg-base/80">
           {/* Subtle Ambient Radial Glow */}
           <div
             className="absolute inset-0 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-40"
