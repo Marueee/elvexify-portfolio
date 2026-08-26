@@ -37,7 +37,7 @@ export function Technologies() {
                 {cat.items.map((t) => (
                   <span
                     key={t}
-                    className="rounded-lg border border-hairline bg-white/[0.02] px-3 py-1.5 text-sm text-ink-soft transition-colors duration-300 group-hover:border-electric/30"
+                    className="rounded-lg border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-3 py-1.5 text-sm text-ink-soft transition-colors duration-300 group-hover:border-electric/30"
                   >
                     {t}
                   </span>
@@ -56,7 +56,7 @@ export function Technologies() {
               key={t}
               className="inline-flex items-center gap-2 font-mono text-xs text-faint"
             >
-              <span className="inline-flex rounded-md border border-hairline bg-white/[0.02] px-2.5 py-1.5 text-ink-soft">
+              <span className="inline-flex rounded-md border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-2.5 py-1.5 text-ink-soft">
                 {t}
               </span>
               {i < ALL_TECH.length - 1 && (

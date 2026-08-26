@@ -22,8 +22,8 @@ const VARIANTS: Record<string, string> = {
   primary:
     "bg-electric text-white shadow-[0_14px_40px_-12px_rgba(43,91,255,0.7)] hover:bg-electric-bright",
   outline:
-    "border border-hairline text-ink hover:border-electric/70 hover:text-white bg-white/[0.02]",
-  ghost: "text-ink-soft hover:text-white bg-white/[0.03] hover:bg-white/[0.06]",
+    "border border-hairline text-ink hover:border-electric/70 hover:text-ink bg-[rgb(var(--c-tint)/0.02)]",
+  ghost: "text-ink-soft hover:text-ink bg-[rgb(var(--c-tint)/0.03)] hover:bg-[rgb(var(--c-tint)/0.06)]",
 };
 
 export function MagneticButton({

@@ -19,12 +19,12 @@ export function Cta() {
           <div className="pointer-events-none absolute -bottom-24 -right-10 h-80 w-80 rounded-full bg-violet/12 blur-[100px]" />
 
           <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white/[0.03] px-4 py-1.5 font-mono text-[0.66rem] uppercase tracking-[0.22em] text-cyan">
+            <span className="inline-flex items-center gap-2 rounded-full border border-hairline bg-[rgb(var(--c-tint)/0.03)] px-4 py-1.5 font-mono text-[0.66rem] uppercase tracking-[0.22em] text-cyan">
               <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-cyan" />
               Let&apos;s build
             </span>
 
-            <h2 className="mt-7 font-display text-balance text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="mt-7 font-display text-balance text-4xl font-semibold leading-[1.05] text-ink sm:text-5xl lg:text-6xl">
               Have a problem
               <br />
               <span className="text-gradient-electric">worth solving?</span>
@@ -48,7 +48,7 @@ export function Cta() {
 
             <a
               href={`mailto:${SITE.email}`}
-              className="mt-8 font-mono text-sm text-ink-soft underline-offset-4 transition-colors hover:text-white hover:underline"
+              className="mt-8 font-mono text-sm text-ink-soft underline-offset-4 transition-colors hover:text-ink hover:underline"
             >
               {SITE.email}
             </a>

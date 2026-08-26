@@ -37,7 +37,7 @@ export function Services() {
                 className="group relative flex h-full flex-col gap-4 bg-base p-7 transition-colors duration-300 hover:bg-surface/60 sm:p-8"
               >
                 <div className="flex items-start justify-between">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-hairline bg-white/[0.02] text-electric-bright transition-all duration-300 group-hover:border-electric/50 group-hover:bg-electric/10">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-hairline bg-[rgb(var(--c-tint)/0.02)] text-electric-bright transition-all duration-300 group-hover:border-electric/50 group-hover:bg-electric/10">
                     <Icon className="h-6 w-6 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3" />
                   </span>
                   <span className="font-mono text-sm text-faint">{s.index}</span>
@@ -59,7 +59,7 @@ export function Services() {
                       {s.tech.map((t) => (
                         <span
                           key={t}
-                          className="rounded-md border border-hairline bg-white/[0.02] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-cyan"
+                          className="rounded-md border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-cyan"
                         >
                           {t}
                         </span>

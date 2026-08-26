@@ -47,8 +47,16 @@ export const metadata: Metadata = {
   applicationName: "Elvexify",
   alternates: { canonical: SITE_URL },
   icons: {
-    icon: [{ url: "/logo/elvexify-icon.png", type: "image/png" }],
-    apple: [{ url: "/logo/elvexify-icon.png" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/logo/elvexify-icon-square.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/logo/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",
@@ -83,11 +91,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full scroll-smooth`}
     >
       <body className="min-h-full bg-base text-ink antialiased font-sans selection:bg-electric/30 selection:text-white">
-        {/* Mark JS as available so scroll-reveal starts hidden only when JS can reveal it.
-            Without JS, content renders fully visible (progressive enhancement). */}
+        {/* Set theme + mark JS as available BEFORE paint to avoid flash.
+            Dark is default; `.light` on <html> switches to light mode.
+            Choice persisted in localStorage ('elvexify-theme'); falls back to
+            the OS prefers-color-scheme on first visit. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
+            __html:
+              "try{var t=localStorage.getItem('elvexify-theme');var m=window.matchMedia('(prefers-color-scheme: light)').matches;if(t==='light'||(!t&&m)){document.documentElement.classList.add('light');}}catch(e){}document.documentElement.classList.add('js');",
           }}
         />
         <a

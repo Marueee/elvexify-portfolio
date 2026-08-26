@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { Logo } from "@/components/shared/Logo";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { cn } from "@/lib/cn";
 
 export function Navbar() {
@@ -76,14 +77,14 @@ export function Navbar() {
                   className={cn(
                     "relative rounded-full px-3.5 py-2 text-sm transition-colors duration-300",
                     active === link.href
-                      ? "text-white"
+                      ? "text-ink"
                       : "text-muted hover:text-ink"
                   )}
                 >
                   {active === link.href && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 -z-10 rounded-full bg-white/[0.06] ring-1 ring-hairline"
+                      className="absolute inset-0 -z-10 rounded-full bg-[rgb(var(--c-tint)/0.06)] ring-1 ring-hairline"
                       transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
@@ -94,6 +95,8 @@ export function Navbar() {
           </ul>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
+
             <a
               href="#contact"
               className="hidden items-center gap-1.5 rounded-full bg-electric px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-electric-bright lg:inline-flex"
@@ -130,6 +133,9 @@ export function Navbar() {
               aria-label="Mobile"
               className="relative mx-auto flex h-full max-w-md flex-col px-6 pt-24"
             >
+              <div className="mb-6 flex justify-end">
+                <ThemeToggle />
+              </div>
               <ul className="flex flex-col gap-1">
                 {NAV_LINKS.map((link, i) => (
                   <motion.li
@@ -143,7 +149,7 @@ export function Navbar() {
                       onClick={() => setOpen(false)}
                       className={cn(
                         "flex items-center justify-between border-b border-hairline/60 py-4 font-display text-2xl font-medium",
-                        active === link.href ? "text-white" : "text-ink-soft"
+                        active === link.href ? "text-ink" : "text-ink-soft"
                       )}
                     >
                       {link.label}

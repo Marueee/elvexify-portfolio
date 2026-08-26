@@ -5,19 +5,19 @@
    Dark, technical, premium. Electric blue + violet + cyan.
    ============================================================ */
 
-@theme {
-  /* ---- Palette ---- */
-  --color-base: #070b1c;
-  --color-base-2: #0b1130;
-  --color-surface: #0e1535;
-  --color-surface-2: #121a3f;
-  --color-hairline: #1d2750;
-  --color-hairline-soft: #18203f;
+@theme inline {
+  /* ---- Palette (theme-aware: values come from CSS vars, flipped by .light) ---- */
+  --color-base: var(--c-base);
+  --color-base-2: var(--c-base-2);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-hairline: var(--c-hairline);
+  --color-hairline-soft: var(--c-hairline-soft);
 
-  --color-ink: #eef2ff;
-  --color-ink-soft: #b7c0e6;
-  --color-muted: #7e88b4;
-  --color-faint: #545e88;
+  --color-ink: var(--c-ink);
+  --color-ink-soft: var(--c-ink-soft);
+  --color-muted: var(--c-muted);
+  --color-faint: var(--c-faint);
 
   --color-electric: #2b5bff;
   --color-electric-bright: #4f7bff;
@@ -38,6 +38,45 @@
   /* ---- Motion ---- */
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ============================================================
+   THEME TOKENS
+   Dark is the default. Add the `.light` class to <html> for light mode
+   (see ThemeToggle + the no-FOUC script in layout.tsx).
+   ============================================================ */
+:root {
+  --c-base: #070b1c;
+  --c-base-2: #0b1130;
+  --c-surface: #0e1535;
+  --c-surface-2: #121a3f;
+  --c-hairline: #1d2750;
+  --c-hairline-soft: #18203f;
+
+  --c-ink: #eef2ff;
+  --c-ink-soft: #b7c0e6;
+  --c-muted: #7e88b4;
+  --c-faint: #545e88;
+
+  /* subtle surface overlay: white on dark */
+  --c-tint: 255 255 255;
+}
+
+.light {
+  --c-base: #f5f7fc;
+  --c-base-2: #eef2fb;
+  --c-surface: #ffffff;
+  --c-surface-2: #f1f4fb;
+  --c-hairline: #dbe2f1;
+  --c-hairline-soft: #e8edf8;
+
+  --c-ink: #0b1130;
+  --c-ink-soft: #3a4670;
+  --c-muted: #5d688f;
+  --c-faint: #8a93b5;
+
+  /* subtle surface overlay: dark on light */
+  --c-tint: 12 18 43;
 }
 
 /* ============================================================
@@ -62,6 +101,11 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
 }
+.light body {
+  background-image:
+    radial-gradient(1100px 700px at 78% -8%, rgba(43, 91, 255, 0.08), transparent 60%),
+    radial-gradient(900px 600px at 8% 6%, rgba(123, 91, 255, 0.06), transparent 55%);
+}
 
 ::selection {
   background: rgba(43, 91, 255, 0.32);
@@ -83,6 +127,13 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #2b3f7f;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: #c4cde0;
+  border-color: var(--color-base);
+}
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #aab6d4;
 }
 
 /* Focus ring */
@@ -146,6 +197,13 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+.light .glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(241, 244, 251, 0.7)
+  );
+}
 
 /* Text gradient */
 .text-gradient {
@@ -153,6 +211,9 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+.light .text-gradient {
+  background: linear-gradient(100deg, #0b1130 0%, #2b3a8f 45%, #4a3aa8 65%, #7b5bff 100%);
 }
 .text-gradient-electric {
   background: linear-gradient(100deg, #4f7bff, #7b5bff 55%, #22d3ee);

@@ -23,7 +23,7 @@ export function Hero() {
       {/* Left: copy — CSS-driven entrance so content is visible without JS */}
       <div className="flex max-w-2xl flex-col items-start text-left">
         <span
-          className="fade-up inline-flex items-center gap-2.5 rounded-full border border-hairline bg-white/[0.03] px-4 py-1.5 font-mono text-[0.68rem] uppercase tracking-[0.22em] text-ink-soft"
+          className="fade-up inline-flex items-center gap-2.5 rounded-full border border-hairline bg-[rgb(var(--c-tint)/0.03)] px-4 py-1.5 font-mono text-[0.68rem] uppercase tracking-[0.22em] text-ink-soft"
           style={{ animationDelay: "0.05s" }}
         >
           <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse-dot" />
@@ -31,7 +31,7 @@ export function Hero() {
         </span>
 
         <h1
-          className="fade-up mt-7 font-display text-[2.7rem] font-semibold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[4.4rem] lg:leading-[1.0]"
+          className="fade-up mt-7 font-display text-[2.7rem] font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-[4.4rem] lg:leading-[1.0]"
           style={{ animationDelay: "0.14s" }}
         >
           Elevate Ideas.

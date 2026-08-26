@@ -42,7 +42,7 @@ function MemberTile({ m, i }: { m: TeamMember; i: number }) {
             ACCENT_BG[m.accent]
           )}
         >
-          <span className="font-display text-5xl font-semibold text-white/90 transition-transform duration-500 group-hover:scale-105">
+          <span className="font-display text-5xl font-semibold text-ink/90 transition-transform duration-500 group-hover:scale-105">
             {m.initials}
           </span>
           {/* grid overlay */}
@@ -68,7 +68,7 @@ function MemberTile({ m, i }: { m: TeamMember; i: number }) {
               {m.interests.map((t) => (
                 <span
                   key={t}
-                  className="rounded-md border border-hairline bg-white/[0.02] px-2 py-0.5 font-mono text-[0.62rem] uppercase tracking-wider text-ink-soft"
+                  className="rounded-md border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-2 py-0.5 font-mono text-[0.62rem] uppercase tracking-wider text-ink-soft"
                 >
                   {t}
                 </span>

@@ -29,7 +29,7 @@ function ProjectPreview({ project }: { project: Project }) {
         <span className="h-2.5 w-2.5 rounded-full bg-rose/60" />
         <span className="h-2.5 w-2.5 rounded-full bg-amber-400/50" />
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/50" />
-        <span className="ml-3 h-4 w-40 rounded bg-white/[0.04]" />
+        <span className="ml-3 h-4 w-40 rounded bg-[rgb(var(--c-tint)/0.04)]" />
       </div>
       {/* faux dashboard / code lines */}
       <div className="absolute inset-x-4 top-16 space-y-2.5">
@@ -37,7 +37,7 @@ function ProjectPreview({ project }: { project: Project }) {
           <div key={r} className="flex items-center gap-2">
             <span className={cn("h-2 w-2 shrink-0 rounded-full", ACCENT_DOT[project.accent])} />
             <span
-              className="h-2 rounded bg-white/[0.07]"
+              className="h-2 rounded bg-[rgb(var(--c-tint)/0.07)]"
               style={{ width: `${50 + ((r * 37) % 45)}%` }}
             />
           </div>
@@ -91,7 +91,7 @@ export function Projects() {
               {/* content */}
               <div className="flex flex-col">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white/[0.03] px-3 py-1 font-mono text-[0.62rem] uppercase tracking-widest text-cyan">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-hairline bg-[rgb(var(--c-tint)/0.03)] px-3 py-1 font-mono text-[0.62rem] uppercase tracking-widest text-cyan">
                     <span className={cn("h-1.5 w-1.5 rounded-full", ACCENT_DOT[p.accent])} />
                     {p.category}
                   </span>
@@ -128,7 +128,7 @@ export function Projects() {
                   {p.technologies.map((t) => (
                     <span
                       key={t}
-                      className="rounded-md border border-hairline bg-white/[0.02] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-ink-soft"
+                      className="rounded-md border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-ink-soft"
                     >
                       {t}
                     </span>

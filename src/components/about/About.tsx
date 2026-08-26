@@ -53,7 +53,7 @@ export function About() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="font-display text-6xl font-semibold text-white">∞</p>
+                  <p className="font-display text-6xl font-semibold text-ink">∞</p>
                   <p className="mt-1 font-mono text-xs uppercase tracking-widest text-faint">
                     problems to solve
                   </p>
@@ -69,7 +69,7 @@ export function About() {
                 ].map((line, i) => (
                   <div
                     key={line}
-                    className="flex items-center gap-3 rounded-xl border border-hairline bg-white/[0.02] px-4 py-3"
+                    className="flex items-center gap-3 rounded-xl border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-4 py-3"
                   >
                     <span className="flex h-7 w-7 items-center justify-center rounded-full bg-electric/10 font-mono text-xs text-electric-bright">
                       {i + 1}

@@ -22,7 +22,7 @@ export function Intro() {
             {["Discovery-led", "Engineering-first", "Outcome-focused"].map((t) => (
               <span
                 key={t}
-                className="rounded-full border border-hairline bg-white/[0.02] px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink-soft"
+                className="rounded-full border border-hairline bg-[rgb(var(--c-tint)/0.02)] px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink-soft"
               >
                 {t}
               </span>
@@ -42,7 +42,7 @@ export function Intro() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                    className="group flex items-center gap-4 rounded-xl px-3 py-3.5 transition-colors hover:bg-white/[0.03]"
+                    className="group flex items-center gap-4 rounded-xl px-3 py-3.5 transition-colors hover:bg-[rgb(var(--c-tint)/0.03)]"
                   >
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-hairline bg-base font-mono text-sm text-electric-bright transition-colors group-hover:border-electric/70">
                       {String(i + 1).padStart(2, "0")}
