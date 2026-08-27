@@ -456,7 +456,7 @@ export function Projects() {
                 <ProjectCardThumbnail project={p} />
 
                 {/* Overlay prompt on hover */}
-                <div className="absolute inset-0 flex items-center justify-center bg-base/60 opacity-0 backdrop-blur-xs transition-opacity duration-300 group-hover:opacity-100">
+                <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center bg-base/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-electric/90 px-4 py-2 font-mono text-xs font-medium text-white shadow-xl">
                     Explore Case Study
                     <ArrowUpRight className="h-3.5 w-3.5" />
