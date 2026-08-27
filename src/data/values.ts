@@ -74,18 +74,6 @@ export const PROCESS: ProcessStep[] = [
     description:
       "Validate quality and reliability under real conditions, not just happy paths.",
   },
-  {
-    index: "06",
-    title: "Deploy",
-    description:
-      "Ship to production with confidence and a clear path to monitor what we released.",
-  },
-  {
-    index: "07",
-    title: "Evolve",
-    description:
-      "Improve continuously from real-world feedback and changing needs.",
-  },
 ];
 
 /** Compact process used in the intro value-proposition diagram. */

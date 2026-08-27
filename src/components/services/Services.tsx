@@ -20,7 +20,7 @@ export function Services() {
         />
       </Reveal>
 
-      <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
         {SERVICES.map((s, i) => {
           const Icon = s.icon;
           return (

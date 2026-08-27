@@ -1,62 +1,72 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
-import { Check } from "lucide-react";
 import { Section } from "@/components/shared/Section";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { PROCESS } from "@/data/values";
 
-export function Process() {
-  const reduce = useReducedMotion();
+const EVOLVE = {
+  index: "06",
+  title: "Evolve — continuously.",
+  description:
+    "The launch is the start, not the finish. We measure, learn and improve the system from real-world feedback.",
+};
 
+export function Process() {
   return (
     <Section id="process" label="process" className="border-t border-hairline/40">
       <Reveal>
         <SectionHeading
-          eyebrow="Process"
-          title="From Ambiguity To Production."
-          description="A connected path through discovery, design, build and beyond — every step deliberate, every handoff clean."
+          eyebrow="How We Engineer"
+          title="A Disciplined Approach To Software."
+          description="Five commitments that shape how we take a problem from ambiguity to a system people rely on."
         />
       </Reveal>
 
-      <div className="relative mt-16">
-        {/* connector line */}
-        <div className="absolute left-0 right-0 top-[26px] hidden h-px bg-gradient-to-r from-electric/0 via-hairline to-electric/0 lg:block" />
-
-        <ol className="relative grid gap-10 lg:grid-cols-7 lg:gap-4">
+      <div className="mt-16">
+        {/* Five even columns of process steps */}
+        <ol className="relative grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-5">
           {PROCESS.map((step, i) => (
-            <Reveal key={step.index} delay={i * 0.04} as="li" className="lg:px-1">
-              <motion.div
-                whileHover={reduce ? undefined : { y: -4 }}
-                className="group flex flex-col items-start gap-4 lg:items-center lg:text-center"
-              >
-                <span className="relative z-10 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-hairline bg-base font-display text-lg font-semibold text-electric-bright transition-all duration-300 group-hover:border-electric/70 group-hover:bg-electric/10 group-hover:shadow-[0_0_24px_-4px_rgba(43,91,255,0.6)]">
-                  {String(i + 1).padStart(2, "0")}
+            <Reveal key={step.index} delay={i * 0.04} as="li" className="bg-base">
+              <div className="group relative h-full p-7 transition-colors duration-300 hover:bg-surface/60 sm:p-8">
+                <span className="pointer-events-none absolute right-4 top-2 select-none font-display text-6xl font-semibold text-hairline-soft">
+                  {step.index}
                 </span>
-                <div className="lg:text-center">
+                <div className="relative">
                   <h3 className="font-display text-lg font-semibold text-ink">
                     {step.title}
                   </h3>
-                  <p className="mt-2 max-w-[15rem] text-sm leading-relaxed text-muted lg:mx-auto">
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
                     {step.description}
                   </p>
+                  <span className="mt-6 flex items-center gap-2 font-mono text-[0.6rem] uppercase tracking-widest text-faint">
+                    <span className="h-1.5 w-1.5 rounded-full bg-electric" />
+                    Step {step.index}
+                  </span>
                 </div>
-                <span className="font-mono text-[0.6rem] uppercase tracking-widest text-faint lg:block">
-                  {step.index}
-                </span>
-              </motion.div>
+              </div>
             </Reveal>
           ))}
         </ol>
 
-        {/* completion badge */}
-        <Reveal delay={0.2}>
-          <div className="mt-14 flex items-center justify-center gap-3 rounded-full border border-cyan/30 bg-cyan/5 px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-cyan">
-            <Check className="h-4 w-4" />
-            Continuous improvement loop
+        {/* Full-width Evolve card */}
+        <div className="group relative mt-5 flex flex-col gap-4 overflow-hidden rounded-3xl border border-hairline bg-base p-7 transition-colors duration-300 hover:bg-surface/60 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <span className="pointer-events-none absolute -left-1 top-0 select-none font-display text-7xl font-semibold text-hairline-soft">
+            {EVOLVE.index}
+          </span>
+          <div className="relative">
+            <h3 className="font-display text-xl font-semibold text-ink">
+              {EVOLVE.title}
+            </h3>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+              {EVOLVE.description}
+            </p>
           </div>
-        </Reveal>
+          <span className="relative flex shrink-0 items-center gap-2 rounded-full border border-cyan/30 bg-cyan/5 px-4 py-2 font-mono text-[0.65rem] uppercase tracking-widest text-cyan">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
+            Always Iterating
+          </span>
+        </div>
       </div>
     </Section>
   );
