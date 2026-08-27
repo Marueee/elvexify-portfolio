@@ -3,7 +3,6 @@ import { ScrollProgress } from "@/components/shared/ScrollProgress";
 import { Hero } from "@/components/hero/Hero";
 import { Intro } from "@/components/intro/Intro";
 import { Services } from "@/components/services/Services";
-import { Solutions } from "@/components/solutions/Solutions";
 import { Projects } from "@/components/projects/Projects";
 import { Technologies } from "@/components/technologies/Technologies";
 import { About } from "@/components/about/About";
@@ -22,13 +21,12 @@ export default function Home() {
         <Hero />
         <Intro />
         <Services />
-        <Solutions />
+        <Process />
         <Projects />
         <Technologies />
         <About />
         <Team />
         <Values />
-        <Process />
         <Cta />
       </main>
       <Footer />

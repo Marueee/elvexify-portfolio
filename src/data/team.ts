@@ -41,7 +41,7 @@ export const TEAM: TeamMember[] = [
     interests: ["Laravel", "Livewire", "PostgreSQL", "React"],
     accent: "violet",
     image: "/team/azim.png",
-    initials: "MA",
+    initials: "AM",
   },
   {
     id: "ilyas",
@@ -52,7 +52,7 @@ export const TEAM: TeamMember[] = [
     interests: ["ESP32-S3", "IoT Sensors", "Embedded C++", "Cloud Telemetry"],
     accent: "electric",
     image: "/team/ilyas.png",
-    initials: "MI",
+    initials: "IL",
   },
   {
     id: "luqmanul",

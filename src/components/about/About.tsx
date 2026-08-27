@@ -21,7 +21,7 @@ export function About() {
           <SectionHeading
             eyebrow="About Elvexify"
             title="Built By Engineers. Driven By Problems Worth Solving."
-            description="Elvexify was created by a team of 6 developers who believe technology should solve real problems — not exist for its own sake. We combine deep engineering with genuine care for the people our software serves."
+            description="Elvexify was created by a team of 6 developers who believe technology should solve real problems, not exist for its own sake. We combine deep engineering with genuine care for the people our software serves."
           />
 
           <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline sm:grid-cols-3">
