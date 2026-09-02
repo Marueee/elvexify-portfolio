@@ -5,13 +5,13 @@ import { cn } from "@/lib/cn";
  *
  * - `showWordmark=true`  → horizontal lockup: vibrant eX icon + crisp "ELVEXIFY" wordmark.
  * - `showWordmark=false` → icon mark only (the eX emblem).
- * - `variant` allows selecting "white" (default, optimized for dark mode), "color", "light", or "stacked".
+ * - `variant` allows selecting "white" (default, optimized for dark mode), "light", or "stacked".
  */
 export interface LogoProps {
   className?: string;
   showWordmark?: boolean;
   size?: number;
-  variant?: "white" | "color" | "light" | "stacked";
+  variant?: "white" | "light" | "stacked";
   alt?: string;
 }
 
@@ -37,8 +37,6 @@ export function Logo({
   const src =
     variant === "stacked"
       ? "/logo/elvexify-logo-stacked.png"
-      : variant === "color"
-      ? "/logo/elvexify-logo-color.png"
       : variant === "light"
       ? "/logo/elvexify-logo-light.png"
       : "/logo/elvexify-logo.png";

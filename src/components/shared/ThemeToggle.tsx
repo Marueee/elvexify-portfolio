@@ -6,7 +6,7 @@ import { cn } from "@/lib/cn";
 
 /**
  * Light/dark mode toggle.
- * - Default theme is dark; light mode adds `.light` to <html>.
+ * - Default theme is light; dark mode adds `.dark` to <html>.
  * - Choice is persisted in localStorage ('elvexify-theme') and read by the
  *   no-FOUC script in layout.tsx so the correct theme paints immediately.
  */

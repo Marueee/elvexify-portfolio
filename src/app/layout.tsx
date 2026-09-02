@@ -88,17 +88,21 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full scroll-smooth`}
+      className="h-full scroll-smooth js"
+      // suppressHydrationWarning is the React 17/18 compat prop that
+      // prevents hydration warnings for expected mismatches (like the
+      // no-FOUC script adding `light` class before React hydrates).
+      suppressHydrationWarning
     >
-      <body className="min-h-full bg-base text-ink antialiased font-sans selection:bg-electric/30 selection:text-white">
+      <body className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} min-h-full bg-base text-ink antialiased font-sans selection:bg-electric/30 selection:text-white`}>
         {/* Set theme + mark JS as available BEFORE paint to avoid flash.
-            Dark is default; `.light` on <html> switches to light mode.
+            Light is default; `.light` on <html> switches to light mode.
             Choice persisted in localStorage ('elvexify-theme'); falls back to
             the OS prefers-color-scheme on first visit. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{var t=localStorage.getItem('elvexify-theme');var m=window.matchMedia('(prefers-color-scheme: light)').matches;if(t==='light'||(!t&&m)){document.documentElement.classList.add('light');}}catch(e){}document.documentElement.classList.add('js');",
+              "try{var t=localStorage.getItem('elvexify-theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='light'||(!t&&!m)){document.documentElement.classList.add('light');}}catch(e){}document.documentElement.classList.add('js');",
           }}
         />
         <a
