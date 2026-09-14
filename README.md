@@ -1,6 +1,6 @@
 # Elvexify — Company Portfolio Landing Page
 
-Premium, dark, technical portfolio site for **Elvexify**, a 7-engineer software
+Premium, dark, technical portfolio site for **Elvexify**, a 6-engineer software
 solutions company. Built with Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
 + Motion + Lucide icons.
 
