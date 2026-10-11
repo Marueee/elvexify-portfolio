@@ -18,7 +18,7 @@ export const TEAM: TeamMember[] = [
       "Leads system architecture, enterprise platform delivery, and full-stack engineering discipline across all Elvexify engagements.",
     interests: ["System Architecture", "Enterprise Platforms", "Next.js", "Laravel"],
     accent: "electric",
-    image: "/team/haikal.png",
+    image: "/team/haikal.jpeg",
     initials: "MH",
   },
   {
@@ -29,7 +29,7 @@ export const TEAM: TeamMember[] = [
       "Architects intelligent diagnostic models, on-device Edge AI pipelines, and computer vision classification systems.",
     interests: ["Computer Vision", "TensorFlow Lite", "Edge AI", "Model Optimization"],
     accent: "cyan",
-    image: "/team/aiman-hakimi.png",
+    image: "/team/aiman-hakimi.jpeg",
     initials: "AH",
   },
   {
@@ -40,7 +40,7 @@ export const TEAM: TeamMember[] = [
       "Specializes in robust enterprise web applications, real-time database models, and reactive dashboard workflows.",
     interests: ["Laravel", "Livewire", "PostgreSQL", "React"],
     accent: "violet",
-    image: "/team/azim.png",
+    image: "/team/azim.jpeg",
     initials: "AM",
   },
   {
@@ -51,7 +51,7 @@ export const TEAM: TeamMember[] = [
       "Engineers connected microcontrollers, telemetry sensors, and low-latency cloud-to-hardware data transmission pipelines.",
     interests: ["ESP32-S3", "IoT Sensors", "Embedded C++", "Cloud Telemetry"],
     accent: "electric",
-    image: "/team/ilyas.png",
+    image: "/team/ilyas.jpeg",
     initials: "IL",
   },
   {
@@ -62,7 +62,7 @@ export const TEAM: TeamMember[] = [
       "Builds high-performance, offline-first mobile applications with native fluidity and ergonomic design systems.",
     interests: ["Flutter", "Dart", "Mobile Architecture", "Supabase"],
     accent: "cyan",
-    image: "/team/luqmanul.png",
+    image: "/team/luqmanul.jpeg",
     initials: "LH",
   },
   {

@@ -204,4 +204,32 @@ export const PROJECTS: Project[] = [
     coverImage: "/projects/signupgo-dashboard.png",
     previewType: "web-dashboard",
   },
+  {
+    id: "beeha-bakes",
+    name: "Beeha Bakes",
+    fullTitle: "Beeha Bakes Biscuits Ordering System",
+    client: "Home-Based Dessert Brand in Kapar, Selangor",
+    category: "Enterprise Web Platform",
+    filterCategory: "web",
+    summary:
+      "A warm, approachable online ordering experience for Beeha Bakes, a home-based dessert brand in Kapar, Selangor known for baking sweet brownie bites with love.",
+    problem:
+      "Home-based dessert orders can become difficult to manage when customers have to rely on scattered messages to browse products, confirm availability, and arrange delivery or pickup.",
+    solution:
+      "Designed a focused ordering interface that presents the brownie bites clearly, communicates the brand story, and guides customers toward menu browsing and pre-order checkout.",
+    result:
+      "A polished digital storefront that makes it easier for customers around Kapar and Klang to discover Beeha Bakes and place their next dessert order.",
+    technologies: [
+      "Responsive Web Design",
+      "Product Catalog",
+      "Online Ordering",
+      "Delivery & Pickup Flow",
+    ],
+    accent: "violet",
+    metricValue: "2–3d",
+    metricLabel: "pre-order turnaround",
+    logoUrl: "",
+    coverImage: "/projects/beeha-bakes.png",
+    previewType: "web-dashboard",
+  },
 ];

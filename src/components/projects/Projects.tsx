@@ -306,7 +306,7 @@ function ProjectModal({
                 </p>
               </div>
 
-              <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+              <p className="mt-4 text-sm leading-relaxed text-ink sm:text-base">
                 {project.summary}
               </p>
 
